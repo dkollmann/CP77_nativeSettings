@@ -873,7 +873,7 @@ function nativeSettings.callCurrentTabSaveCallback()
     if nativeSettings.currenTabPath then
         local tab = nativeSettings.data[  nativeSettings.currenTabPath ]
 
-        if tab then
+        if tab and tab.savecallback then
             tab.savecallback()
         end
     end
